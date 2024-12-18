@@ -129,11 +129,11 @@ std::vector<const Vertex*> Graph::reconstructPath(const Vertex* start, const Ver
 }
 
 // using raw pointer to Vertex as the key
-void Graph::addVertex(Vector2 location) {
-	addVertex(location.x, location.y);
+Vertex* Graph::addVertex(Vector2 location) {
+	return addVertex(location.x, location.y);
 }
 
-void Graph::addVertex(float x, float y) {
+Vertex* Graph::addVertex(float x, float y) {
 	verts.push_back(std::make_unique<Vertex>(x, y));
 
 	Vertex* vertex = verts.back().get();
@@ -154,6 +154,8 @@ void Graph::addVertex(float x, float y) {
 							// get()  returns raw pointer managed by unique_ptr
 		std::vector<std::pair<const Vertex*, float>>() // initialize with an empty adjacency list
 	);
+
+	return verts.back().get();
 }
 
 void Graph::addEdge(const Vertex* from, const Vertex* to, float weight) {

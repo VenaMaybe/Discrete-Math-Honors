@@ -28,8 +28,8 @@ public:
 	void printAdjList() const;
 
 	// Adders
-	void addVertex(Vector2 location);
-	void addVertex(float x, float y);
+	Vertex* addVertex(Vector2 location);
+	Vertex* addVertex(float x, float y);
 	void addEdge(const Vertex* from, const Vertex* to, float weight);
 		// void removeVertex(const Vertex* vertex);
 
