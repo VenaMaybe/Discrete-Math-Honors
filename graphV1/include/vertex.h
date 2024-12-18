@@ -11,11 +11,17 @@ public:
 	Vertex() = default;
 	Vertex(int x, int y);
 
-	// Render this vertex
-	void render() const;
+	/*	Callback, stores a function that can be invoked when needed
+		The idea is to treat a function as data that can be passed around and called later
+		This function is of type void with input const Vertex*  */
 
-	// Update realtime info about it (pos w/ mouse)
-	void update();
+	// This sets the callback from the outside
+	void setOnClickCallback(std::function<void(const Vertex*)> callback);
+	// When we think a click has occurred on this vertex, we call the callback
+	void handleClickEvent();
+
+	void render() const; // Called every frame
+	void update(); // Called every frame
 
 	// Getters and Setters
 	Vector2 getPos() const;
@@ -27,16 +33,22 @@ public:
 	// Equality operator for Vertex
 	bool operator==(const Vertex& other) const;
 private:
-	// UTIL: Is the mouse within a certain distance? 
-	bool isHovered(const Vector2& mousePos) const;
-	void updateDragging(const Vector2& mousePos);
-
 	// Rendering
 	Vector2 pos = {0, 0};
 	int radius = 10;
 
-	// Updating
+	std::function<void(const Vertex*)> onClickCallback; // Stores the callback
+
+	// UTIL: Is the mouse within a certain distance? 
+	bool isHovered(const Vector2& mousePos) const;
+	void updateDragging(const Vector2& mousePos);
+	void updateStartEnd(const Vector2& mousePos);
+
+	// Current State
+	Color currentColor = RAYWHITE;
 	bool isDragging;
+	bool isStart = false;
+	bool isEnd = false;
 
 	// Grant access to the hash specialization
 	friend struct std::hash<Vertex>;

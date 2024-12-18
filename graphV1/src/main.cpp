@@ -27,6 +27,9 @@ int main() {
 		}
 	}
 
+	// Throws error if deque empty || begin() is a cool generic iterator
+	graph.checkShortestPathFrom(verts.begin()->get()); 
+
 	graph.printInfo();
 	graph.printAdjList();
 	

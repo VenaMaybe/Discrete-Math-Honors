@@ -2,10 +2,12 @@
 #define OBJ_MANAGER_H
 
 #include "graph.h"
+#include "graph_interaction_manager.h"
 
 class ObjMan {
 private:
 	Graph graph; // Member variable to store the Graph
+	GraphInteractionManager interactionManager;
 
 public:
 	ObjMan();

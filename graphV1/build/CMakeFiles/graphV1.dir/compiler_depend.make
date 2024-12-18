@@ -333,8 +333,10 @@ CMakeFiles/graphV1.dir/src/graph.cpp.o: ../src/graph.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../include/vertex.h \
-  /home/vena/school/discreetMath115/Honors/raylib-5.5_linux_amd64/include/raylib.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/unordered_map \
@@ -346,8 +348,9 @@ CMakeFiles/graphV1.dir/src/graph.cpp.o: ../src/graph.cpp \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
+  ../include/vertex.h \
+  /home/vena/school/discreetMath115/Honors/raylib-5.5_linux_amd64/include/raylib.h \
   ../include/edge.h \
   ../include/raylib_helper.h
 
@@ -567,7 +570,10 @@ CMakeFiles/graphV1.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/deque \
   /usr/include/c++/11/bits/stl_deque.h \
   /usr/include/c++/11/bits/deque.tcc \
-  ../include/vertex.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/unordered_map \
@@ -579,8 +585,8 @@ CMakeFiles/graphV1.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
+  ../include/vertex.h \
   ../include/edge.h \
   ../include/raylib_helper.h \
   ../include/random.h \
@@ -597,7 +603,6 @@ CMakeFiles/graphV1.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/limits \
   /usr/include/c++/11/tr1/gamma.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/tr1/bessel_function.tcc \
@@ -834,7 +839,10 @@ CMakeFiles/graphV1.dir/src/main_render.cpp.o: ../src/main_render.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../include/vertex.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/unordered_map \
@@ -846,8 +854,8 @@ CMakeFiles/graphV1.dir/src/main_render.cpp.o: ../src/main_render.cpp \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
+  ../include/vertex.h \
   ../include/edge.h \
   ../include/raylib_helper.h \
   ../include/random.h \
@@ -864,7 +872,6 @@ CMakeFiles/graphV1.dir/src/main_render.cpp.o: ../src/main_render.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/limits \
   /usr/include/c++/11/tr1/gamma.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/tr1/bessel_function.tcc \
@@ -1098,8 +1105,10 @@ CMakeFiles/graphV1.dir/src/obj_manager.cpp.o: ../src/obj_manager.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../include/vertex.h \
-  /home/vena/school/discreetMath115/Honors/raylib-5.5_linux_amd64/include/raylib.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/unordered_map \
@@ -1111,8 +1120,9 @@ CMakeFiles/graphV1.dir/src/obj_manager.cpp.o: ../src/obj_manager.cpp \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
+  ../include/vertex.h \
+  /home/vena/school/discreetMath115/Honors/raylib-5.5_linux_amd64/include/raylib.h \
   ../include/edge.h \
   ../include/raylib_helper.h
 
@@ -1453,6 +1463,8 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.o: ../src/vertex.cpp \
 
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
 
+/usr/include/c++/11/tr1/hypergeometric.tcc:
+
 /usr/include/c++/11/bit:
 
 /usr/include/c++/11/cstdlib:
@@ -1669,10 +1681,6 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.o: ../src/vertex.cpp \
 
 /usr/include/c++/11/bits/std_abs.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/backward/auto_ptr.h:
@@ -1680,6 +1688,12 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.o: ../src/vertex.cpp \
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/c++/11/bits/stl_queue.h:
 
 /usr/include/endian.h:
 
@@ -1793,6 +1807,12 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.o: ../src/vertex.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
 /usr/include/c++/11/functional:
 
 /usr/include/linux/errno.h:
@@ -1806,6 +1826,8 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.o: ../src/vertex.cpp \
 /usr/include/c++/11/ext/string_conversions.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
+
+/usr/include/c++/11/queue:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
 
@@ -1824,8 +1846,6 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.o: ../src/vertex.cpp \
 /usr/include/c++/11/cstdint:
 
 /usr/include/c++/11/bits/localefwd.h:
-
-/usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
@@ -1933,6 +1953,8 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.o: ../src/vertex.cpp \
 
 /usr/include/c++/11/bits/istream.tcc:
 
+/usr/include/c++/11/limits:
+
 ../src/main.cpp:
 
 ../include/obj_manager.h:
@@ -1965,14 +1987,6 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.o: ../src/vertex.cpp \
 
 /usr/include/c++/11/bits/specfun.h:
 
-/usr/include/c++/11/limits:
-
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/tr1/beta_function.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/c++/11/tr1/legendre_function.tcc:

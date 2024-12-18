@@ -5,6 +5,9 @@
 #include <memory>
 #include <deque>
 #include <iostream>
+#include <limits> // For std::numeric_limits
+#include <queue> // For std::priority_queue
+#include <functional> // For std::greater
 #include "vertex.h"
 #include "edge.h"
 
@@ -17,18 +20,23 @@ public:
 	void render() const;
 	void update();
 
+	// Called when updating shortest path information (Using Dijkstra's)
+	void checkShortestPathFrom(const Vertex* start);
+
+	// Printers
+	void printInfo() const;
+	void printAdjList() const;
+
+	// Adders
 	void addVertex(Vector2 location);
 	void addVertex(float x, float y);
-	// void removeVertex(const Vertex* vertex);
-	void addEdge(const Vertex* v1, const Vertex* v2, float weight);
+	void addEdge(const Vertex* from, const Vertex* to, float weight);
+		// void removeVertex(const Vertex* vertex);
 
 	// Returns references and pointers
 	const std::deque<std::unique_ptr<Vertex>>& getVerts();
 	std::vector<Edge>& getEdges();
 
-	// Printers
-	void printInfo() const;
-	void printAdjList() const;
 private:
 	// This is like an Edge List since both are stored independently
 	// Deque is a double-ended queue
@@ -41,6 +49,10 @@ private:
 		const Vertex*, 
 		std::vector<std::pair<const Vertex*, float>>
 	> adjacencyList;
+
+	// From the starting vertex
+	// Dictionary (destinationVertex : costFromStartVertex)
+	std::unordered_map<const Vertex*, float> totalDistanceTo;
 };
 
 
