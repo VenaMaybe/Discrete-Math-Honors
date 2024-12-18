@@ -10,10 +10,8 @@
 #include <functional> // For std::greater
 #include "vertex.h"
 #include "edge.h"
-#include "graph_interaction_manager.h"
 
-//for later
-//using NeighborAndWeight = std::vector<std::pair<const Vertex*, float>>;
+class GraphInteractionManager;	// Forward declaration
 
 class Graph {
 public:
@@ -23,6 +21,7 @@ public:
 
 	// Called when updating shortest path information (Using Dijkstra's)
 	void checkShortestPathFrom(const Vertex* start);
+	std::vector<const Vertex*> reconstructPath(const Vertex* start, const Vertex* end);
 
 	// Printers
 	void printInfo() const;
@@ -37,6 +36,7 @@ public:
 	// Returns references and pointers
 	const std::deque<std::unique_ptr<Vertex>>& getVerts();
 	std::vector<Edge>& getEdges();
+	Edge* getEdgeBetween(const Vertex* start, const Vertex* end);
 
 private:
 	GraphInteractionManager* graphInteractionManager;
@@ -56,6 +56,10 @@ private:
 	// From the starting vertex
 	// Dictionary (destinationVertex : costFromStartVertex)
 	std::unordered_map<const Vertex*, float> totalDistanceTo;
+
+	// Keep track of how we got to each vertex to reconstruct paths
+	std::unordered_map<const Vertex*, const Vertex*> previous;
+		// previous[v] will tell us which vertex we came from to reach v along the shortest path
 };
 
 

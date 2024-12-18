@@ -16,7 +16,12 @@ public:
 	void update();
 	
 	void setWeight(float weight);
+	void setColor(Color color);
+	void setThickness(float thickness);
 	Vertex getCenterVertex() const;
+	const Vertex* getFrom();
+	const Vertex* getTo();
+	
 private:
 	// We set these as const to enforce read-only behavior
 	//		Edge only observes the vertices. Edges cannot change their connected vertices
@@ -24,8 +29,9 @@ private:
 	const Vertex* to = nullptr;
 	// make these std::weak_ptr so no dangling ptrs
 
-
 	float weight = 0.f;
+	Color currentColor = RAYWHITE;
+	float thickness = 1.f;
 };
 
 #endif // EDGE_H

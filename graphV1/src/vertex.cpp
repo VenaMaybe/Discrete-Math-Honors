@@ -1,4 +1,5 @@
 #include "vertex.h"
+#include "raylib_helper.h"
 
 // Constructor
 Vertex::Vertex(int x, int y) : pos({static_cast<float>(x), static_cast<float>(y)}) {}
@@ -20,6 +21,7 @@ void Vertex::handleClickEvent() {
 // Called every frame
 void Vertex::render() const {
 	DrawCircle(pos.x, pos.y, radius, currentColor);
+	DrawOutlinedText(TextFormat("%p",this), pos.x -5, pos.y, 20, 2, RAYWHITE, BLACK);
 }
 
 // Called every frame

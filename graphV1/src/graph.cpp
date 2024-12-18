@@ -1,4 +1,6 @@
 #include "graph.h"
+#include "graph_interaction_manager.h"
+#include <cassert>
 
 Graph::Graph(GraphInteractionManager* graphInteractionManager = nullptr) 
 	: graphInteractionManager(graphInteractionManager) {}
@@ -22,17 +24,18 @@ void Graph::update() {
 }
 
 void Graph::checkShortestPathFrom(const Vertex* start) {
+	std::cout << "checkShortestPathFrom() WAS RUN!!!" << std::endl;
+
 	// Initialize the dictionary of distances
 	for (const auto& vertex : verts) {
 		totalDistanceTo.emplace(vertex.get(), std::numeric_limits<float>::infinity());
 	}
 
 	// We set our start node with distance 0
-	totalDistanceTo.at(start) = 0.f;
+	totalDistanceTo.at(start) = 0.0f;
 
-	// Keep track of how we got to each vertex to reconstruct paths
-	std::unordered_map<const Vertex*, const Vertex*> previous;
-		// previous[v] will tell us which vertex we cae from to reach v along the shortest path
+	////// Moved previous to private variables
+	//std::unordered_map<const Vertex*, const Vertex*> previous;
 
 	for (const auto& vertex : verts) {
 		// Initially, no vertex has a predecessor so all values are set to nullptr
@@ -67,6 +70,8 @@ void Graph::checkShortestPathFrom(const Vertex* start) {
 			// Calculate the alternate route distance
 			float altDistance = totalDistanceTo.at(currentVertex) + weight;
 
+			
+
 			// If we find a shorter path to neighbor
 			if (altDistance < totalDistanceTo.at(neighbor)) {
 				// Store the path
@@ -80,6 +85,46 @@ void Graph::checkShortestPathFrom(const Vertex* start) {
 			}
 		}
 	}
+
+	for (auto item : previous) {
+		std::cout << "In previous (" << item.first << ", " << item.second << ")" << std::endl;
+	}
+
+}
+
+std::vector<const Vertex*> Graph::reconstructPath(const Vertex* start, const Vertex* end) {
+	std::vector<const Vertex*> path;
+
+    // If we don't have a path (distance is infinity), just return empty
+    // (You could check this if you have direct access to totalDistanceTo[end])
+    // For now, let's assume there's a path.
+
+    // Begin at 'end' and follow previous links until start
+		// This is classic for(initialization, condition, iteration)
+    for (const Vertex* current = end; current != nullptr; current = previous.at(current)) {
+        path.push_back(current);
+        if (current == start) {
+            break;
+        }
+    }
+
+    // Check if we actually reached the start
+    // If the last vertex in path is not start, it means no path was found
+	assert(!(path.back() != start));
+    if (path.back() != start) {
+        // No path found
+		std::cout << "==> (path.back() != start)" << std::endl;
+        return {}; // empty vector
+    }
+
+    // Reverse the path to get from start to end
+    std::reverse(path.begin(), path.end());
+
+	for (auto vertex : path) {
+		std::cout << "In Path: " << vertex << std::endl;
+	}
+
+    return path;
 }
 
 // using raw pointer to Vertex as the key
@@ -117,6 +162,18 @@ void Graph::addEdge(const Vertex* from, const Vertex* to, float weight) {
 	adjacencyList.at(from).emplace_back(to, weight);
 	adjacencyList.at(to).emplace_back(from, weight);
 }
+
+Edge* Graph::getEdgeBetween(const Vertex* start, const Vertex* end) {
+	for (Edge& edge : edges) {
+		if (edge.getFrom() == start && edge.getTo() == end || edge.getTo() == start && edge.getFrom() == end) {
+			return &edge;
+		}
+	}
+	// If it's not found, return nothing, throw an error ig
+	assert(false);
+	return nullptr;
+}
+
 
 const std::deque<std::unique_ptr<Vertex>>& Graph::getVerts() {
 	return verts;

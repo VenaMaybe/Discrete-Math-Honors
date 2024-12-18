@@ -8,7 +8,7 @@ Edge::Edge(const Vertex* from, const Vertex* to, float weight)
 void Edge::render() const {
 	if (!from || !to) return; // Make sure pointers are valid
 
-	DrawLine(from->getX(), from->getY(), to->getX(), to->getY(), RAYWHITE);
+	DrawLineEx(from->getPos(), to->getPos(), thickness, currentColor);
 	DrawOutlinedText(TextFormat("%.f",weight), getCenterVertex().getX(), getCenterVertex().getY(), 20, 2, RAYWHITE, BLACK);
 }
 
@@ -17,7 +17,20 @@ void Edge::update() {}
 void Edge::setWeight(float weight) {
 	this->weight = weight;
 }
+void Edge::setColor(Color color) {
+	this->currentColor = color;
+}
+void Edge::setThickness(float thickness) {
+	this->thickness = thickness;
+}
 
 Vertex Edge::getCenterVertex() const {
 	return  Vertex((from->getX()+to->getX())/2, (from->getY()+to->getY())/2);
+}
+
+const Vertex* Edge::getFrom() {
+	return from;
+}
+const Vertex* Edge::getTo() {
+	return to;
 }

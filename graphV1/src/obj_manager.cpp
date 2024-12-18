@@ -2,9 +2,8 @@
 
 // Constructor
 ObjMan::ObjMan() 
-	: graph(&graphInteractionManager) {
-	// Initialize the graph if needed (default constructor is called automatically)
-}
+	: graph(&graphInteractionManager), // We link them together
+	  graphInteractionManager(&graph) {}
 
 // Getter for the graph
 Graph& ObjMan::getGraph() {
