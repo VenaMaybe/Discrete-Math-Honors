@@ -1,6 +1,5 @@
 #include "graph.h"
 #include "graph_interaction_manager.h"
-#include <cassert>
 
 Graph::Graph(GraphInteractionManager* graphInteractionManager = nullptr) 
 	: graphInteractionManager(graphInteractionManager) {}
@@ -25,6 +24,10 @@ void Graph::update() {
 
 void Graph::checkShortestPathFrom(const Vertex* start) {
 	std::cout << "checkShortestPathFrom() WAS RUN!!!" << std::endl;
+
+	// Clear the mapped data
+	totalDistanceTo.clear();
+	previous.clear();
 
 	// Initialize the dictionary of distances
 	for (const auto& vertex : verts) {
@@ -110,10 +113,8 @@ std::vector<const Vertex*> Graph::reconstructPath(const Vertex* start, const Ver
 
     // Check if we actually reached the start
     // If the last vertex in path is not start, it means no path was found
-	assert(!(path.back() != start));
     if (path.back() != start) {
         // No path found
-		std::cout << "==> (path.back() != start)" << std::endl;
         return {}; // empty vector
     }
 
@@ -170,7 +171,6 @@ Edge* Graph::getEdgeBetween(const Vertex* start, const Vertex* end) {
 		}
 	}
 	// If it's not found, return nothing, throw an error ig
-	assert(false);
 	return nullptr;
 }
 

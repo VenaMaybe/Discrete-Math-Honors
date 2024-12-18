@@ -1,6 +1,5 @@
 #include "graph_interaction_manager.h"
 #include <iostream>
-#include <cassert>
 
 GraphInteractionManager::GraphInteractionManager(Graph* graph)
 	: graph(graph) {}
@@ -18,21 +17,22 @@ void GraphInteractionManager::onVertexClicked(Vertex* vertex) {
 		if (graph) { // Just ensuring it exists
 			auto path = graph->reconstructPath(startVertex, endVertex);
 
-			assert(path.size() > 1);
+			// Only 1 point in the path
+			if(path.size() < 2) {
+				std::cout << "The two points don't connect!!!" << std::endl;
+			} else {
+				for (int i = 0; i < path.size() - 1; ++i) {
+					const Vertex* current = path[i];
+					const Vertex* next = path[i + 1];
+					
+					Edge* edgeBetween = graph->getEdgeBetween(current, next);
 
-			for (int i = 0; i < path.size() - 1; ++i) {
-				const Vertex* current = path[i];
-				const Vertex* next = path[i + 1];
-				
-				Edge* edgeBetween = graph->getEdgeBetween(current, next);
+					if (edgeBetween) { // if it exists
+						edgeBetween->setColor(ORANGE);
+						edgeBetween->setThickness(3.f);
+					}
 
-				assert(edgeBetween != nullptr);
-
-				if (edgeBetween) { // if it exists
-					edgeBetween->setColor(ORANGE);
-					edgeBetween->setThickness(3.f);
 				}
-
 			}
 
 		}
