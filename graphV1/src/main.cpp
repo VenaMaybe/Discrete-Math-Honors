@@ -10,7 +10,7 @@ int main() {
 	// The main graph
 	Graph& graph = manager.getGraph();
 
-	for (int i = 0; i < 6; i++) {
+	for (int i = 0; i < 4; i++) {
 		graph.addVertex(Random::getRandomInt(0, 800), Random::getRandomInt(0, 450));
 	}
 
@@ -28,6 +28,7 @@ int main() {
 	}
 
 	graph.printInfo();
+	graph.printAdjList();
 	
 	// Calls all necessary game loop shit
 	mainGameLoop(manager);

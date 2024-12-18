@@ -10,23 +10,26 @@ public:
 	// Constructors
 	Vertex() = default;
 	Vertex(int x, int y);
+
 	// Render this vertex
 	void render() const;
+
 	// Update realtime info about it (pos w/ mouse)
 	void update();
-	bool isHovered(Vector2 mousePos) const;
 
-	void setRad(int radius);
-	void setPos(int x, int y);
+	// Getters and Setters
 	Vector2 getPos() const;
 	int getX() const;
 	int getY() const;
+	void setRad(int radius);
+	void setPos(int x, int y);
 
 	// Equality operator for Vertex
 	bool operator==(const Vertex& other) const;
 private:
-	// Data
-	int someData = 42;
+	// UTIL: Is the mouse within a certain distance? 
+	bool isHovered(const Vector2& mousePos) const;
+	void updateDragging(const Vector2& mousePos);
 
 	// Rendering
 	Vector2 pos = {0, 0};

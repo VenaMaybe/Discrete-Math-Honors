@@ -11,6 +11,18 @@ void Vertex::render() const {
 // Used to update info about it every tick
 void Vertex::update() {
 	Vector2 mousePos = GetMousePosition();
+	updateDragging(mousePos);
+}
+
+// Doesn't modify state or mousePos
+bool Vertex::isHovered(const Vector2& mousePos) const {
+	// Is the mouse within a certain distance
+	float radius = 10.f;
+	return CheckCollisionPointCircle(mousePos, pos, radius);
+}
+
+// Modifies state but doesn't modify mousePos
+void Vertex::updateDragging(const Vector2& mousePos) {
 	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && isHovered(mousePos)) {
 		isDragging = true;
 	}
@@ -21,14 +33,8 @@ void Vertex::update() {
 			isDragging = false; // letting go of it
 		}
 	}
-
 }
 
-bool Vertex::isHovered(Vector2 mousePos) const {
-	// Is the mouse within a certain distance
-	float radius = 10.f;
-	return CheckCollisionPointCircle(mousePos, pos, radius);
-}
 
 void Vertex::setPos(int x, int y) {
 	this->pos.x=x;

@@ -26,8 +26,9 @@ public:
 	const std::deque<std::unique_ptr<Vertex>>& getVerts();
 	std::vector<Edge>& getEdges();
 
+	// Printers
 	void printInfo() const;
-	
+	void printAdjList() const;
 private:
 	// This is like an Edge List since both are stored independently
 	// Deque is a double-ended queue
