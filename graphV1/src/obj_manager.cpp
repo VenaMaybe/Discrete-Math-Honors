@@ -1,7 +1,8 @@
 #include "obj_manager.h"
 
 // Constructor
-ObjMan::ObjMan() {
+ObjMan::ObjMan() 
+	: graph(&graphInteractionManager) {
 	// Initialize the graph if needed (default constructor is called automatically)
 }
 

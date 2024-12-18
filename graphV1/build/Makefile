@@ -177,6 +177,30 @@ src/graph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/graphV1.dir/build.make CMakeFiles/graphV1.dir/src/graph.cpp.s
 .PHONY : src/graph.cpp.s
 
+src/graph_interaction_manager.o: src/graph_interaction_manager.cpp.o
+.PHONY : src/graph_interaction_manager.o
+
+# target to build an object file
+src/graph_interaction_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/graphV1.dir/build.make CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o
+.PHONY : src/graph_interaction_manager.cpp.o
+
+src/graph_interaction_manager.i: src/graph_interaction_manager.cpp.i
+.PHONY : src/graph_interaction_manager.i
+
+# target to preprocess a source file
+src/graph_interaction_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/graphV1.dir/build.make CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.i
+.PHONY : src/graph_interaction_manager.cpp.i
+
+src/graph_interaction_manager.s: src/graph_interaction_manager.cpp.s
+.PHONY : src/graph_interaction_manager.s
+
+# target to generate assembly for a file
+src/graph_interaction_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/graphV1.dir/build.make CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.s
+.PHONY : src/graph_interaction_manager.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -336,6 +360,9 @@ help:
 	@echo "... src/graph.o"
 	@echo "... src/graph.i"
 	@echo "... src/graph.s"
+	@echo "... src/graph_interaction_manager.o"
+	@echo "... src/graph_interaction_manager.i"
+	@echo "... src/graph_interaction_manager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

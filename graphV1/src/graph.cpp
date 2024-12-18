@@ -1,6 +1,7 @@
 #include "graph.h"
 
-Graph::Graph() {}
+Graph::Graph(GraphInteractionManager* graphInteractionManager = nullptr) 
+	: graphInteractionManager(graphInteractionManager) {}
 
 void Graph::render() const {
 	for (const auto& v : verts) {
@@ -88,6 +89,19 @@ void Graph::addVertex(Vector2 location) {
 
 void Graph::addVertex(float x, float y) {
 	verts.push_back(std::make_unique<Vertex>(x, y));
+
+	Vertex* vertex = verts.back().get();
+	
+	// Set a callback for when this vertex is clicked
+	vertex->setOnClickCallback(
+		[&](Vertex* clickedVertex) {
+			// Pass the event up to the interaction manager
+			if(graphInteractionManager) {
+				graphInteractionManager->onVertexClicked(clickedVertex);
+			}
+		}
+	);
+
 	adjacencyList.emplace( // creates a list emplace for each added vertex
 		verts.back().get(), // pointer from last vertex added to verts
 							// back() returns unique_ptr<Vertex>& reference

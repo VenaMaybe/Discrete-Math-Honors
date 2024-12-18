@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/graphV1.dir/src/edge.cpp.o.d"
   "CMakeFiles/graphV1.dir/src/graph.cpp.o"
   "CMakeFiles/graphV1.dir/src/graph.cpp.o.d"
+  "CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o"
+  "CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o.d"
   "CMakeFiles/graphV1.dir/src/main.cpp.o"
   "CMakeFiles/graphV1.dir/src/main.cpp.o.d"
   "CMakeFiles/graphV1.dir/src/main_render.cpp.o"

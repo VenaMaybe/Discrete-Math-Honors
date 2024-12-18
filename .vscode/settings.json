@@ -47,5 +47,7 @@
 		"streambuf": "cpp",
 		"cinttypes": "cpp",
 		"typeinfo": "cpp"
-	}
+	},
+	"makefile.makefilePath": "/graphV1/build/Makefile",
+	"cmake.sourceDirectory": "/home/vena/school/discreetMath115/Honors/graphV1"
 }

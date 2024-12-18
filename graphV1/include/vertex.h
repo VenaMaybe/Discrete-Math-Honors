@@ -16,7 +16,7 @@ public:
 		This function is of type void with input const Vertex*  */
 
 	// This sets the callback from the outside
-	void setOnClickCallback(std::function<void(const Vertex*)> callback);
+	void setOnClickCallback(std::function<void(Vertex*)> callback);
 	// When we think a click has occurred on this vertex, we call the callback
 	void handleClickEvent();
 
@@ -29,6 +29,7 @@ public:
 	int getY() const;
 	void setRad(int radius);
 	void setPos(int x, int y);
+	void setColor(Color color);
 
 	// Equality operator for Vertex
 	bool operator==(const Vertex& other) const;
@@ -37,7 +38,7 @@ private:
 	Vector2 pos = {0, 0};
 	int radius = 10;
 
-	std::function<void(const Vertex*)> onClickCallback; // Stores the callback
+	std::function<void(Vertex*)> onClickCallback; // Stores the callback
 
 	// UTIL: Is the mouse within a certain distance? 
 	bool isHovered(const Vector2& mousePos) const;
@@ -47,8 +48,10 @@ private:
 	// Current State
 	Color currentColor = RAYWHITE;
 	bool isDragging;
-	bool isStart = false;
-	bool isEnd = false;
+
+			// prob delete later
+			bool isStart = false;
+			bool isEnd = false;
 
 	// Grant access to the hash specialization
 	friend struct std::hash<Vertex>;

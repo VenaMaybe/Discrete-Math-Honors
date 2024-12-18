@@ -7,7 +7,7 @@
 class ObjMan {
 private:
 	Graph graph; // Member variable to store the Graph
-	GraphInteractionManager interactionManager;
+	GraphInteractionManager graphInteractionManager;
 
 public:
 	ObjMan();

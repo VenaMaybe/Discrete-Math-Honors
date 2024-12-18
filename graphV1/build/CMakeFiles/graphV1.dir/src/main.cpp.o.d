@@ -188,6 +188,7 @@ CMakeFiles/graphV1.dir/src/main.cpp.o: \
  /home/vena/school/discreetMath115/Honors/graphV1/include/vertex.h \
  /home/vena/school/discreetMath115/Honors/graphV1/include/edge.h \
  /home/vena/school/discreetMath115/Honors/graphV1/include/raylib_helper.h \
+ /home/vena/school/discreetMath115/Honors/graphV1/include/graph_interaction_manager.h \
  /home/vena/school/discreetMath115/Honors/graphV1/include/random.h \
  /usr/include/c++/11/random /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \

@@ -10,13 +10,14 @@
 #include <functional> // For std::greater
 #include "vertex.h"
 #include "edge.h"
+#include "graph_interaction_manager.h"
 
 //for later
 //using NeighborAndWeight = std::vector<std::pair<const Vertex*, float>>;
 
 class Graph {
 public:
-	Graph();
+	Graph(GraphInteractionManager* graphInteractionManager);
 	void render() const;
 	void update();
 
@@ -38,6 +39,8 @@ public:
 	std::vector<Edge>& getEdges();
 
 private:
+	GraphInteractionManager* graphInteractionManager;
+
 	// This is like an Edge List since both are stored independently
 	// Deque is a double-ended queue
 	std::deque<std::unique_ptr<Vertex>> verts;

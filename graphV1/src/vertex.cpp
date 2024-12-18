@@ -4,7 +4,7 @@
 Vertex::Vertex(int x, int y) : pos({static_cast<float>(x), static_cast<float>(y)}) {}
 
 // Callback
-void Vertex::setOnClickCallback(std::function<void(const Vertex*)> callback) {
+void Vertex::setOnClickCallback(std::function<void(Vertex*)> callback) {
 	onClickCallback = callback;
 }
 
@@ -13,7 +13,7 @@ void Vertex::handleClickEvent() {
 	// This if is just to ensure that it is not null
 	if (onClickCallback) {
 		// When we think a click has occurred on this vertex, we call the callback
-		onClickCallback(this);
+		onClickCallback(this); // pass the current vertex
 	}
 }
 
@@ -27,7 +27,8 @@ void Vertex::update() {
 	Vector2 mousePos = GetMousePosition();
 
 	// Trigger the callback if it's isn't null 
-	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && isHovered(mousePos)) {
+	if (IsMouseButtonPressed(MOUSE_BUTTON_RIGHT) && isHovered(mousePos)) {
+		// I could pass what button is pressed too
 		handleClickEvent();
 	}
 
@@ -74,22 +75,24 @@ void Vertex::updateStartEnd(const Vector2& mousePos) {
 }
 
 
-void Vertex::setPos(int x, int y) {
-	this->pos.x=x;
-	this->pos.y=y;
-}
 
-void Vertex::setRad(int radius) {
-	this->radius = radius;
-}
 
 Vector2 Vertex::getPos() const {
 	return pos;
 }
-
 int Vertex::getX() const {
 	return pos.x;
 }
 int Vertex::getY() const {
 	return pos.y;
+}
+void Vertex::setPos(int x, int y) {
+	this->pos.x=x;
+	this->pos.y=y;
+}
+void Vertex::setRad(int radius) {
+	this->radius = radius;
+}
+void Vertex::setColor(Color color) {
+	this->currentColor = color;
 }
