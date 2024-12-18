@@ -20,12 +20,15 @@ void Graph::update() {
 	}
 }
 
+// using raw pointer to Vertex as the key
 void Graph::addVertex(Vector2 location) {
-	auto vertex = 
 	verts.push_back(std::make_unique<Vertex>(location.x, location.y));
-	adjacencyList.emplace(
-		verts.back().get(),
-		);
+	adjacencyList.emplace( // creates a list emplace for each added vertex
+		verts.back().get(), // pointer from last vertex added to verts
+							// back() returns unique_ptr<Vertex>& reference
+							// get()  returns raw pointer managed by unique_ptr
+		std::vector<std::pair<const Vertex*, float>>() // initialize with an empty adjacency list
+	);
 }
 
 void Graph::addVertex(float x, float y) {
@@ -37,7 +40,7 @@ void Graph::addEdge(const Vertex* v1, const Vertex* v2, float weight) {
 	edges.emplace_back(v1, v2, weight); // <- basically Edge()
 }
 
-const std::deque<std::shared_ptr<Vertex>>& Graph::getVerts() {
+const std::deque<std::unique_ptr<Vertex>>& Graph::getVerts() {
 	return verts;
 }
 

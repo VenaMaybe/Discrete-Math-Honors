@@ -8,6 +8,9 @@
 #include "vertex.h"
 #include "edge.h"
 
+//for later
+//using NeighborAndWeight = std::vector<std::pair<const Vertex*, float>>;
+
 class Graph {
 public:
 	Graph();
@@ -16,10 +19,11 @@ public:
 
 	void addVertex(Vector2 location);
 	void addVertex(float x, float y);
+	// void removeVertex(const Vertex* vertex);
 	void addEdge(const Vertex* v1, const Vertex* v2, float weight);
 
 	// Returns references and pointers
-	const std::deque<std::shared_ptr<Vertex>>& getVerts();
+	const std::deque<std::unique_ptr<Vertex>>& getVerts();
 	std::vector<Edge>& getEdges();
 
 	void printInfo() const;
@@ -27,14 +31,15 @@ public:
 private:
 	// This is like an Edge List since both are stored independently
 	// Deque is a double-ended queue
-	std::deque<std::shared_ptr<Vertex>> verts;
-	//		We use a shared_ptr so it can be we can use weak_ptrs
+	std::deque<std::unique_ptr<Vertex>> verts;
 	std::vector<Edge> edges;
 
 	// Adjacency List where each key is a node and its value is a list of tuples (neighbor, weight)
 	// Dictionary (VertexKey : List{(neighbor, weight), ...})
-	std::unordered_map<std::weak_ptr<const Vertex>, std::vector<std::pair<const Vertex*, float>>> adjacencyList;
-	//		We use a weak_ptr since the dictionary doesn't need to own the Vertex
+	std::unordered_map<
+		const Vertex*, 
+		std::vector<std::pair<const Vertex*, float>>
+	> adjacencyList;
 };
 
 
