@@ -28,6 +28,7 @@ void GraphInteractionManager::onVertexClicked(Vertex* vertex) {
 					Edge* edgeBetween = graph->getEdgeBetween(current, next);
 
 					if (edgeBetween) { // if it exists
+						edgeBetween->setOutlined(true);
 						edgeBetween->setColor(ORANGE);
 						edgeBetween->setThickness(3.f);
 					}

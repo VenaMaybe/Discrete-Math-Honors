@@ -18,7 +18,9 @@ public:
 	void setWeight(float weight);
 	void setColor(Color color);
 	void setThickness(float thickness);
+	void setOutlined(bool outlined);
 	Vertex getCenterVertex() const;
+	const bool& getOutlined() const;
 	const Vertex* getFrom();
 	const Vertex* getTo();
 	
@@ -32,6 +34,7 @@ private:
 	float weight = 0.f;
 	Color currentColor = RAYWHITE;
 	float thickness = 1.f;
+	bool outlined = false;
 };
 
 #endif // EDGE_H

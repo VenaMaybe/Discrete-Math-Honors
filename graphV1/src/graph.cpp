@@ -11,6 +11,12 @@ void Graph::render() const {
 	for (const auto& e : edges) {
 		e.render();
 	}
+	// Shitty but just forces the ones on top to be redrawn above
+	for (auto &edge : edges) {
+		if (edge.getOutlined()) {
+        	edge.render();  // A separate function that only draws orange text
+    }
+}
 }
 
 void Graph::update() {

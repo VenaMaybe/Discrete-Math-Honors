@@ -9,7 +9,7 @@ void Edge::render() const {
 	if (!from || !to) return; // Make sure pointers are valid
 
 	DrawLineEx(from->getPos(), to->getPos(), thickness, currentColor);
-	DrawOutlinedText(TextFormat("%.f",weight), getCenterVertex().getX(), getCenterVertex().getY(), 20, 2, RAYWHITE, BLACK);
+	DrawOutlinedText(TextFormat("%.f",weight), getCenterVertex().getX(), getCenterVertex().getY(), 20, 2, currentColor, BLACK);
 }
 
 void Edge::update() {}
@@ -23,11 +23,16 @@ void Edge::setColor(Color color) {
 void Edge::setThickness(float thickness) {
 	this->thickness = thickness;
 }
+void Edge::setOutlined(bool outlined) {
+	this->outlined = outlined;
+}
 
 Vertex Edge::getCenterVertex() const {
 	return  Vertex((from->getX()+to->getX())/2, (from->getY()+to->getY())/2);
 }
-
+const bool& Edge::getOutlined() const {
+	return outlined;
+}
 const Vertex* Edge::getFrom() {
 	return from;
 }
