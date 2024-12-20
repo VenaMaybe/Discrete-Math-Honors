@@ -7,28 +7,26 @@ int main() {
 	// The object manager
 	ObjMan manager;
 
-	// // The main graph
-	// Graph& graph = manager.getGraph();
-
-	// for (int i = 0; i < 5; i++) {
-	// 	graph.addVertex(Random::getRandomInt(0, 800), Random::getRandomInt(0, 450));
-	// }
-
-	// // Iteration with shrinking loops to avoid duplicates
-	// const auto& verts = graph.getVerts();
-	// for (int i = 0; i < verts.size(); ++i) {
-	// 	for (int j = i + 1; j < verts.size(); ++j) {
-	// 		if(Random::getRandomInt(0,1)) {
-	// 			Vertex* v1 = verts[i].get();
-	// 			Vertex* v2 = verts[j].get();
-
-	// 			graph.addEdge(v1, v2, Random::getRandomInt(1,5));
-	// 		}
-	// 	}
-	// }
-
 	// The main graph
 	Graph &graph = manager.getGraph();
+
+//	for (int i = 0; i < 6; i++) {
+//		graph.addVertex(Random::getRandomInt(0, 800), Random::getRandomInt(0, 450));
+//	}
+//
+//	// Iteration with shrinking loops to avoid duplicates
+//	const auto& verts = graph.getVerts();
+//	for (int i = 0; i < verts.size(); ++i) {
+//		for (int j = i + 1; j < verts.size(); ++j) {
+//			if(Random::getRandomInt(0,1)) {
+//				Vertex* v1 = verts[i].get();
+//				Vertex* v2 = verts[j].get();
+//
+//				graph.addEdge(v1, v2, Random::getRandomInt(1,5));
+//			}
+//		}
+//	}
+
 
 	// We'll create a layered structure:
 	// 1. A single start vertex at a known position
@@ -37,7 +35,9 @@ int main() {
 	// 3. A single end vertex at the final layer position
 
 	// You can adjust these values to tweak the layout
-	int numLayers = 5;        // number of intermediate layers
+
+
+	int numLayers = 4;        // number of intermediate layers
 	int minPerLayer = 4;
 	int maxPerLayer = 4;
 	int layerSpacingX = 100;  // distance between layers horizontally
