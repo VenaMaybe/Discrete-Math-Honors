@@ -97,10 +97,24 @@ CMakeFiles/graphV1.dir/src/graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphV1.dir/src/graph.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vena/school/discreetMath115/Honors/graphV1/src/graph.cpp -o CMakeFiles/graphV1.dir/src/graph.cpp.s
 
+CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o: CMakeFiles/graphV1.dir/flags.make
+CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o: /home/vena/school/discreetMath115/Honors/graphV1/src/graph_interaction_manager.cpp
+CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o: CMakeFiles/graphV1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o -MF CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o.d -o CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o -c /home/vena/school/discreetMath115/Honors/graphV1/src/graph_interaction_manager.cpp
+
+CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vena/school/discreetMath115/Honors/graphV1/src/graph_interaction_manager.cpp > CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.i
+
+CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vena/school/discreetMath115/Honors/graphV1/src/graph_interaction_manager.cpp -o CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.s
+
 CMakeFiles/graphV1.dir/src/main.cpp.o: CMakeFiles/graphV1.dir/flags.make
 CMakeFiles/graphV1.dir/src/main.cpp.o: /home/vena/school/discreetMath115/Honors/graphV1/src/main.cpp
 CMakeFiles/graphV1.dir/src/main.cpp.o: CMakeFiles/graphV1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graphV1.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graphV1.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/graphV1.dir/src/main.cpp.o -MF CMakeFiles/graphV1.dir/src/main.cpp.o.d -o CMakeFiles/graphV1.dir/src/main.cpp.o -c /home/vena/school/discreetMath115/Honors/graphV1/src/main.cpp
 
 CMakeFiles/graphV1.dir/src/main.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/graphV1.dir/src/main.cpp.s: cmake_force
 CMakeFiles/graphV1.dir/src/main_render.cpp.o: CMakeFiles/graphV1.dir/flags.make
 CMakeFiles/graphV1.dir/src/main_render.cpp.o: /home/vena/school/discreetMath115/Honors/graphV1/src/main_render.cpp
 CMakeFiles/graphV1.dir/src/main_render.cpp.o: CMakeFiles/graphV1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graphV1.dir/src/main_render.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/graphV1.dir/src/main_render.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/graphV1.dir/src/main_render.cpp.o -MF CMakeFiles/graphV1.dir/src/main_render.cpp.o.d -o CMakeFiles/graphV1.dir/src/main_render.cpp.o -c /home/vena/school/discreetMath115/Honors/graphV1/src/main_render.cpp
 
 CMakeFiles/graphV1.dir/src/main_render.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/graphV1.dir/src/main_render.cpp.s: cmake_force
 CMakeFiles/graphV1.dir/src/obj_manager.cpp.o: CMakeFiles/graphV1.dir/flags.make
 CMakeFiles/graphV1.dir/src/obj_manager.cpp.o: /home/vena/school/discreetMath115/Honors/graphV1/src/obj_manager.cpp
 CMakeFiles/graphV1.dir/src/obj_manager.cpp.o: CMakeFiles/graphV1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/graphV1.dir/src/obj_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/graphV1.dir/src/obj_manager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/graphV1.dir/src/obj_manager.cpp.o -MF CMakeFiles/graphV1.dir/src/obj_manager.cpp.o.d -o CMakeFiles/graphV1.dir/src/obj_manager.cpp.o -c /home/vena/school/discreetMath115/Honors/graphV1/src/obj_manager.cpp
 
 CMakeFiles/graphV1.dir/src/obj_manager.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/graphV1.dir/src/obj_manager.cpp.s: cmake_force
 CMakeFiles/graphV1.dir/src/random.cpp.o: CMakeFiles/graphV1.dir/flags.make
 CMakeFiles/graphV1.dir/src/random.cpp.o: /home/vena/school/discreetMath115/Honors/graphV1/src/random.cpp
 CMakeFiles/graphV1.dir/src/random.cpp.o: CMakeFiles/graphV1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/graphV1.dir/src/random.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/graphV1.dir/src/random.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/graphV1.dir/src/random.cpp.o -MF CMakeFiles/graphV1.dir/src/random.cpp.o.d -o CMakeFiles/graphV1.dir/src/random.cpp.o -c /home/vena/school/discreetMath115/Honors/graphV1/src/random.cpp
 
 CMakeFiles/graphV1.dir/src/random.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/graphV1.dir/src/random.cpp.s: cmake_force
 CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o: CMakeFiles/graphV1.dir/flags.make
 CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o: /home/vena/school/discreetMath115/Honors/graphV1/src/raylib_helper.cpp
 CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o: CMakeFiles/graphV1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o -MF CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o.d -o CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o -c /home/vena/school/discreetMath115/Honors/graphV1/src/raylib_helper.cpp
 
 CMakeFiles/graphV1.dir/src/raylib_helper.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/graphV1.dir/src/raylib_helper.cpp.s: cmake_force
 CMakeFiles/graphV1.dir/src/vertex.cpp.o: CMakeFiles/graphV1.dir/flags.make
 CMakeFiles/graphV1.dir/src/vertex.cpp.o: /home/vena/school/discreetMath115/Honors/graphV1/src/vertex.cpp
 CMakeFiles/graphV1.dir/src/vertex.cpp.o: CMakeFiles/graphV1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/graphV1.dir/src/vertex.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/graphV1.dir/src/vertex.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/graphV1.dir/src/vertex.cpp.o -MF CMakeFiles/graphV1.dir/src/vertex.cpp.o.d -o CMakeFiles/graphV1.dir/src/vertex.cpp.o -c /home/vena/school/discreetMath115/Honors/graphV1/src/vertex.cpp
 
 CMakeFiles/graphV1.dir/src/vertex.cpp.i: cmake_force
@@ -185,6 +199,7 @@ CMakeFiles/graphV1.dir/src/vertex.cpp.s: cmake_force
 graphV1_OBJECTS = \
 "CMakeFiles/graphV1.dir/src/edge.cpp.o" \
 "CMakeFiles/graphV1.dir/src/graph.cpp.o" \
+"CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o" \
 "CMakeFiles/graphV1.dir/src/main.cpp.o" \
 "CMakeFiles/graphV1.dir/src/main_render.cpp.o" \
 "CMakeFiles/graphV1.dir/src/obj_manager.cpp.o" \
@@ -197,6 +212,7 @@ graphV1_EXTERNAL_OBJECTS =
 
 graphV1: CMakeFiles/graphV1.dir/src/edge.cpp.o
 graphV1: CMakeFiles/graphV1.dir/src/graph.cpp.o
+graphV1: CMakeFiles/graphV1.dir/src/graph_interaction_manager.cpp.o
 graphV1: CMakeFiles/graphV1.dir/src/main.cpp.o
 graphV1: CMakeFiles/graphV1.dir/src/main_render.cpp.o
 graphV1: CMakeFiles/graphV1.dir/src/obj_manager.cpp.o
@@ -205,7 +221,7 @@ graphV1: CMakeFiles/graphV1.dir/src/raylib_helper.cpp.o
 graphV1: CMakeFiles/graphV1.dir/src/vertex.cpp.o
 graphV1: CMakeFiles/graphV1.dir/build.make
 graphV1: CMakeFiles/graphV1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable graphV1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vena/school/discreetMath115/Honors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable graphV1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/graphV1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

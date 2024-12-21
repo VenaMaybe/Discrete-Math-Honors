@@ -19,10 +19,10 @@ public:
 	void setColor(Color color);
 	void setThickness(float thickness);
 	void setOutlined(bool outlined);
-	Vertex getCenterVertex() const;
+	Vector2 getCenterVertex() const;
 	const bool& getOutlined() const;
-	const Vertex* getFrom();
-	const Vertex* getTo();
+	const Vertex* getFrom() const;
+	const Vertex* getTo() const;
 	
 private:
 	// We set these as const to enforce read-only behavior

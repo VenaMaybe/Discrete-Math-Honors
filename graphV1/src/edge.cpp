@@ -9,7 +9,7 @@ void Edge::render() const {
 	if (!from || !to) return; // Make sure pointers are valid
 
 	DrawLineEx(from->getPos(), to->getPos(), thickness, currentColor);
-	DrawOutlinedText(TextFormat("%.f",weight), getCenterVertex().getX(), getCenterVertex().getY(), 20, 2, currentColor, BLACK);
+	DrawOutlinedText(TextFormat("%.f",weight), getCenterVertex().x, getCenterVertex().y, 20, 2, currentColor, BLACK);
 }
 
 void Edge::update() {}
@@ -27,15 +27,16 @@ void Edge::setOutlined(bool outlined) {
 	this->outlined = outlined;
 }
 
-Vertex Edge::getCenterVertex() const {
-	return  Vertex((from->getX()+to->getX())/2, (from->getY()+to->getY())/2);
+Vector2 Edge::getCenterVertex() const {
+	return  Vector2{static_cast<float>((from->getX()+to->getX())/2),
+					static_cast<float>((from->getY()+to->getY())/2)};
 }
 const bool& Edge::getOutlined() const {
 	return outlined;
 }
-const Vertex* Edge::getFrom() {
+const Vertex* Edge::getFrom() const {
 	return from;
 }
-const Vertex* Edge::getTo() {
+const Vertex* Edge::getTo() const {
 	return to;
 }
