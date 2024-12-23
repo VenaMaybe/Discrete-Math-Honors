@@ -11,7 +11,4 @@ const int SCREEN_HEIGHT = 450;
 // Raylib preamble
 void mainGameLoop(ObjMan& objMan);
 
-// Draws all objects
-void venaDraw(const ObjMan& objMan);
-
 #endif // MAIN_RENDER_H

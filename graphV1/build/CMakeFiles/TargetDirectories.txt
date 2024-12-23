@@ -1,3 +1,0 @@
-/home/vena/school/discreetMath115/Honors/graphV1/build/CMakeFiles/graphV1.dir
-/home/vena/school/discreetMath115/Honors/graphV1/build/CMakeFiles/edit_cache.dir
-/home/vena/school/discreetMath115/Honors/graphV1/build/CMakeFiles/rebuild_cache.dir

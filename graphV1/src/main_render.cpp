@@ -27,8 +27,3 @@ void mainGameLoop(ObjMan& objMan) {
 	// Close window and OpenGL context
 	CloseWindow();
 }
-
-
-void venaDraw(const ObjMan& objMan) {
-	objMan.render();
-}
