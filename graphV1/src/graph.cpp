@@ -15,8 +15,8 @@ void Graph::render() const {
 	for (auto &edge : edges) {
 		if (edge.getOutlined()) {
         	edge.render();  // A separate function that only draws orange text
-    }
-}
+    	}
+	}
 }
 
 void Graph::update() {
